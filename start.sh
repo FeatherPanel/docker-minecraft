@@ -15,11 +15,14 @@ else
     chown $SFTP_USER:sftp /sftp/minecraft/*
     chmod 777 /sftp/minecraft
     chmod 777 /sftp/minecraft/*
+    
+    apt-get install screen
 
     service ssh start
 
     touch /configured
 
+    screen -S minecraft
     wget https://resources.featherpanel.ml/minecraft/$MINECRAFT_VERSION/server.jar -O server.jar
     java -jar /sftp/minecraft/server.jar nogui
 fi
