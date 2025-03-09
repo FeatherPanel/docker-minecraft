@@ -31,12 +31,12 @@ else
 
 	# Create Run Script
 	cd /app
-	wget $RUN_URL -q -O run.sh
+	wget $PANEL_URL/api/v1/games/minecraft/run-script/$GAME_SOFTWARE/$GAME_VERSION/$GAME_VERSION2/$GAME_VERSION3 -q -O run.sh
 	chmod +x run.sh
 
 	# Run Installation Script
 	cd /app/files
-	wget -q -O - $INSTALL_URL | bash
+	wget -q -O - $PANEL_URL/api/v1/games/minecraft/install-script/$GAME_SOFTWARE/$GAME_VERSION/$GAME_VERSION2/$GAME_VERSION3 | bash
 
 	# Misc
 	echo "eula=true" >eula.txt
