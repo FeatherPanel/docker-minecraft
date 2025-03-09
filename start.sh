@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-IS_INSTALLED=/app/.installed
+IS_INSTALLED=/app/INSTALLED
 JAVA_VERSION=${JAVA_VERSION:-$(update-java-alternatives -l | awk '{print $1}' | head -n 1)}
 
 if [ -f "$IS_INSTALLED" ]; then
@@ -105,7 +105,7 @@ else
 	chmod +x /app/run.sh
 
 	# Mark As Installed
-	touch /app/.installed
+	touch /app/INSTALLED
 
 	# Run Pre-Init Scripts
 	if [ -d "/app/pre-init.d" ]; then

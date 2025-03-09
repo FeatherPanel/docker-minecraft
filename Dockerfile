@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
-LABEL maintainer="Feather Panel <featherpanel@natoune.fr>"
-LABEL version="1.0.0"
+LABEL maintainer="Feather Panel <featherpanel@natanchiodi.fr>"
+LABEL version="1.0.1"
 LABEL description="Minecraft server for FeatherPanel"
 
 # Install dependencies
